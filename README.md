@@ -14,3 +14,38 @@ Django Cheat Sheet Python Developers
 
   
 
+# Integrate django-summer note editor with Django Project.
+
+```
+# Step 1: install the Summernote package
+  pip install django-summernote
+
+# Step 2: settings.py
+
+INSTALLED_APPS = (
+    'django_summernote',
+)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 
+    
+# Step 3: urls.py
+
+urlpatterns = [
+    path('summernote/', include('django_summernote.urls')),
+]
+
+# Step 2: admin.py
+from django_summernote.admin import SummernoteModelAdmin
+from .models import Post
+
+class PostAdmin(SummernoteModelAdmin):
+    summernote_fields = ('content',)
+
+admin.site.register(Post, PostAdmin)
+```
+
+Check the Post model content field in Django admin. 
