@@ -12,15 +12,15 @@ Django Cheat Sheet Python Developers
 
 # Start a new Django project
 
-   >> Activate the virtual environment first then
+   ### Activate the virtual environment first then
 ```
     (env) $ django-admin startproject <projectname> .
 ```
 Note: If you want to avoid creating the additional top-level project folder, you can add a dot (.) at the end of the django-admin startproject command. The dot skips the top-level project folder and creates your management app and the manage.py file right inside your current working directory
  
- >> Create an app
+ ### Create an app
 ```
-    ~$  python manage.py startapp your_app_name
+   (env) $  python manage.py startapp <your_app_name>
 ```
 # Integrate django-summer note editor with Django Project.
 
