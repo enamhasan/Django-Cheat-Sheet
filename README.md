@@ -3,8 +3,8 @@ Django Cheat Sheet Python Developers
 
 # Setup environment for a new Django project
 - Create a new Project folder and navigate to it with $ cd <Project>
-- Create Python virtual env $ python3 -m venv venv
-- Activate virtual env $ source venv/bin/activate
+- Create Python virtual env $ python3 -m venv my_venv
+- Activate virtual env $ source my_venv/bin/activate
 - To deactivate virtual env $ deactivate (In case you need)
 - Install django $ pip install django
 - Install other package dependencies with $ pip install <package_name>. The best way to install all necessary packages is to create a requirements.txt file and list
@@ -22,6 +22,10 @@ Note: If you want to avoid creating the additional top-level project folder, you
 ```
    (env) $  python manage.py startapp <your_app_name>
 ```
+# Django in Production with Apache mod_wsgi.
+  
+# Django in Production with Nginx Gunicorn.
+
 # Integrate django-summer note editor with Django Project.
 
 ```
@@ -57,3 +61,8 @@ admin.site.register(Post, PostAdmin)
 ```
 
 Check the Post model content field in Django admin. 
+
+
+
+
+
